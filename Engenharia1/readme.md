@@ -27,7 +27,7 @@ How an organization will need to adapt as it evolves
 Trade-offs and Costs
 How an organization makes decisions, based on the lessons of Time and Change and Scale and Growth
 
-
+# Comentário do trecho 2
 O texto propõe que as organizações devem pensar a longo prazo sobre seus códigos, que não basta que ele seja bom e funcional agora, mas que ele deve ser capaz de se adaptar as possíveis mudanças que podem acontecer com o tempo. No texto são citados três princípios fundamentais para essa linha de raciocínio: Tempo e Mudança, Escala e Crescimento, Compensações e Custos.
 
 Exemplos de trade-off: 
@@ -36,3 +36,6 @@ Exemplos de trade-off:
 2 - HDD vs SSD:  O HDD é mais barato por GB, ideal para armazenar grandes quantidades de dados a um custo menor. O SSD é muito mais rápido no acesso e carregamento de arquivos, mas com um custo mais alto por GB.
 
 3 - CPU vs GPU: A CPU é projetada para tarefas gerais e operações sequenciais, sendo essencial para sistemas operacionais e aplicativos comuns. A GPU é especializada em processamento paralelo, ideal para gráficos, modelagem 3D e inteligencia artificial.
+
+# Comentário do slide 57
+O slide apresenta uma citação de François Chollet sobre como o primeiro passo para construir um sistema complexo, é construir um sistema simples primeiro. Primeiro você começa, depois você melhora.
