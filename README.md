@@ -42,3 +42,84 @@ O texto propõe que as organizações devem pensar a longo prazo sobre seus cód
 
 ## Comentário do slide 57
 O slide apresenta uma citação de François Chollet sobre como o primeiro passo para construir um sistema complexo, é construir um sistema simples primeiro. Primeiro você começa, depois você melhora.
+
+## Fazer em Java um programa semelhante ao estacionamento
+```java
+import java.util.List;
+import java.util.LinkedList;
+
+public class Locadora {
+    private List<Filme> filmes = new LinkedList<Filme>();
+
+    public void addFilme(Filme filme) {
+        filmes.add(filme);
+    }
+    public Filme buscarFilmeNome(String nome) {
+        for (Filme filme:filmes) {
+            if(filme.getNome().equals(nome)) return filme;
+        }
+        return null;
+    }
+    public List<Filme> buscarFilmeGenero(String genero){
+        List<Filme> encontrados = new LinkedList<Filme>();
+        for(Filme filme: filmes){
+            if (filme.getGenero().equals(genero)) encontrados.add(filme);
+        }
+        return encontrados;
+    }
+
+    public List<Filme> getFilmes(){// metodo verbo minusculo
+        return filmes;
+    }
+}
+
+
+public class Filme {
+    private String genero;
+    private String nome;
+
+    public Filme(String gênero, String nome) {
+        this.genero = gênero;
+        this.nome = nome;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setGenero(String gênero) {
+        this.genero = gênero;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    @Override
+    public String toString() {
+        return "Filme{" + "nome='" + nome + "', genero='" + genero + "'}";
+    }
+}
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+
+public class Main {
+
+    @Test
+    public void testLocadora() {
+        Locadora loc = new Locadora();
+
+        loc.addFilme(new Filme("terror", "Pânico"));
+        loc.addFilme(new Filme("comédia", "Gente Grande"));
+
+        assertEquals(2, loc.getFilmes().size());
+
+        Filme filme = loc.buscarFilmeNome("Pânico");
+
+        assertEquals("terror", filme.getGenero());
+    }
+}
