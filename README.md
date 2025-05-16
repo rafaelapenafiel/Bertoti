@@ -39,7 +39,6 @@ O texto propõe que as organizações devem pensar a longo prazo sobre seus cód
 
 3 - CPU vs GPU: A CPU é projetada para tarefas gerais e operações sequenciais, sendo essencial para sistemas operacionais e aplicativos comuns. A GPU é especializada em processamento paralelo, ideal para gráficos, modelagem 3D e inteligencia artificial.
 
-<h1>Aula 2</h1>
 
 ## Comentário do slide 57
 O slide apresenta uma citação de François Chollet sobre como o primeiro passo para construir um sistema complexo, é construir um sistema simples primeiro. Primeiro você começa, depois você melhora.
